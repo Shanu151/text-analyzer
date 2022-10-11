@@ -66,7 +66,7 @@ export default function States(props) {
       </div>
       <div className="container my-3" style={{color:props.mode==='dark'?'white':'black'}}>
         <h2>Your Text summary</h2>
-        <p>{text.split(" ").length-1} Words and {text.length} Characters</p>
+        <p>{text.split(" ").filter((element)=>{return element.length!=0}).length} Words and {text.length} Characters</p>
         <p>{0.008 * text.split(" ").length} Minutes to Read</p>
         <h2>Preview</h2>
         <p>{text}</p>
